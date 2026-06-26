@@ -1,0 +1,473 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+.App {
+  min-height: 100vh;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.desktop-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #F5ECD7;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(139, 111, 71, 0.02) 10px,
+      rgba(139, 111, 71, 0.02) 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(107, 127, 90, 0.02) 10px,
+      rgba(107, 127, 90, 0.02) 20px
+    );
+  position: relative;
+}
+
+/* Add paper texture noise */
+.desktop-wrapper::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header */
+.desktop-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(232, 220, 196, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid #8B6F47;
+  padding: 1rem 2rem;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(61, 40, 23, 0.1);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header-copy {
+  min-width: 0;
+}
+
+.desktop-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3D2817;
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.desktop-subtitle {
+  font-size: 1.1rem;
+  color: #6B7F5A;
+  margin: 0.25rem 0 0 0; 
+  font-weight: 500;
+}
+
+.resume-header-button {
+  background: linear-gradient(135deg, #a14d21 0%, #93572b 100%);
+  color: #FAF5EB;
+  border: 2px solid #6D472A;
+  border-radius: 999px;
+  box-shadow:
+    0 4px 0 rgba(109, 71, 42, 0.45),
+    0 8px 18px rgba(61, 40, 23, 0.14);
+  font-family: 'Fira Code', monospace;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 1.5rem 2rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.resume-header-button:hover {
+  background: linear-gradient(135deg, #7A5135 0%, #935F3D 100%);
+  color: #FFF7ED;
+}
+
+.resume-header-button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 4px 0 rgba(109, 71, 42, 0.45),
+    0 0 0 4px rgba(245, 236, 215, 0.95);
+}
+
+/* Desktop Icons Container */
+.desktop-icons-container {
+  position: fixed;
+  left: 40px;
+  top: 120px;
+  bottom: 80px;
+  width: 450px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Hand-drawn Icon Styling */
+.icon-container {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.icon-container:hover {
+  transform: translateY(-8px);
+}
+
+.icon-paper {
+  background: rgba(250, 245, 235, 0.95);
+  padding: 1rem 0.75rem;
+  border-radius: 8px;
+  border: 2.5px solid #8B6F47;
+  box-shadow: 
+    3px 3px 0px rgba(139, 111, 71, 0.3),
+    6px 6px 15px rgba(61, 40, 23, 0.15);
+  position: relative;
+  transition: all 0.3s ease;
+  min-width: 110px;
+}
+
+.icon-container:hover .icon-paper {
+  box-shadow: 
+    4px 4px 0px rgba(139, 111, 71, 0.4),
+    8px 8px 20px rgba(61, 40, 23, 0.25);
+  border-color: #6B7F5A;
+}
+
+/* Add sketchy border effect */
+.icon-paper::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 8px;
+  border: 1px dashed rgba(139, 111, 71, 0.2);
+  pointer-events: none;
+}
+
+/* Add paper fold corner */
+.icon-paper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #E8DCC4 transparent transparent;
+  filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* Center Illustration */
+.center-illustration {
+  position: fixed;
+  top: 280px;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.illustration-content {
+  width: 600px;
+  max-width: 50vw;
+  position: relative;
+}
+
+/* Decorative Doodles */
+.doodle {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(139, 111, 71, 0.3);
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  animation: float 3s ease-in-out infinite;
+}
+
+.doodle-1 {
+  top: -50px;
+  left: -80px;
+  animation-delay: 0s;
+}
+
+.doodle-2 {
+  top: -40px;
+  right: -70px;
+  animation-delay: 0.5s;
+}
+
+.doodle-3 {
+  bottom: -60px;
+  left: -60px;
+  animation-delay: 1s;
+  font-size: 1.5rem;
+}
+
+.doodle-4 {
+  bottom: -50px;
+  right: -80px;
+  animation-delay: 1.5s;
+}
+
+.doodle-5 {
+  top: 50%;
+  right: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+/* Code Block Styling */
+.code-block {
+  background: rgba(250, 245, 235, 0.95);
+  border: 3px solid #8B6F47;
+  border-radius: 12px;
+  box-shadow: 
+    5px 5px 0px rgba(139, 111, 71, 0.4),
+    10px 10px 30px rgba(61, 40, 23, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  transform: rotate(-1deg);
+}
+
+.code-block:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 
+    6px 6px 0px rgba(139, 111, 71, 0.5),
+    12px 12px 40px rgba(61, 40, 23, 0.3);
+}
+
+/* Add sketchy outline */
+.code-block::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 12px;
+  border: 2px dashed rgba(107, 127, 90, 0.3);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.code-header {
+  background: #8B9D7C;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid #6B7F5A;
+}
+
+.code-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.code-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.code-dots span:nth-child(1) {
+  background: #FF6B6B;
+}
+
+.code-dots span:nth-child(2) {
+  background: #FFD93D;
+}
+
+.code-dots span:nth-child(3) {
+  background: #6BCF7F;
+}
+
+.code-title {
+  color: white;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.code-body {
+  padding: 2rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.code-body p {
+  margin: 0.25rem 0;
+}
+
+.code-comment {
+  color: #8B9D7C;
+  font-style: italic;
+}
+
+.code-keyword {
+  color: #8B6F47;
+  font-weight: 600;
+}
+
+.code-var {
+  color: #3D2817;
+  font-weight: 600;
+}
+
+.code-property {
+  color: #6B7F5A;
+}
+
+.code-string {
+  color: #D4A574;
+}
+
+/* Footer */
+.desktop-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(232, 220, 196, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 3px solid #8B6F47;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #5D4E37;
+  font-size: 0.9rem;
+  z-index: 50;
+  box-shadow: 0 -4px 12px rgba(61, 40, 23, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .center-illustration {
+    right: 5%;
+  }
+  
+  .illustration-content {
+    width: 500px;
+    max-width: 45vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .header-content {
+    gap: 0.75rem;
+  }
+
+  .desktop-title {
+    font-size: 1.5rem;
+  }
+
+  .desktop-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .resume-header-button {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .desktop-icons-container {
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 20px 20px;
+    justify-content: center;
+    gap: 10px;
+    overflow-y: visible;
+  }
+  
+  .desktop-icon {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .center-illustration {
+    display: none;
+  }
+
+  .illustration-content {
+    width: 90vw;
+  }
+
+  .code-body {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .desktop-icon {
+    transform: scale(0.85);
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5ECD7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A0826D;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B6F47;
+}
