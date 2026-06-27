@@ -111,12 +111,18 @@ function App() {
                 <p><span className="code-keyword">const</span> <span className="code-var">developer</span> = {'{'}</p>
                 <p>  <span className="code-property">name</span>: <span className="code-string">'{profileData.name}'</span>,</p>
                 <p>  <span className="code-property">role</span>: <span className="code-string">'{profileData.title}'</span>,</p>
-                <p>  <span className="code-property">passion</span>: <span className="code-string">'Passionate about building great software'</span>,</p>
+                <p>  <span className="code-property">passion</span>: <span className="code-string">'Passionate about AI, systems, and innovation'</span>,</p>
                 <p>  <span className="code-property">status</span>: <span className="code-string">'Open for opportunities'</span></p>
                 <p>{'};'}</p>
               </div>
             </div>
 
+            {/* Decorative doodles */}
+            <div className="doodle doodle-1">~</div>
+            <div className="doodle doodle-2">*</div>
+            <div className="doodle doodle-3">+</div>
+            <div className="doodle doodle-4">{'{'}</div>
+            <div className="doodle doodle-5">{'}'}</div>
           </div>
         </div>
 
