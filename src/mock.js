@@ -15,56 +15,56 @@ export const profileData = {
 
 export const projects = [
   {
-  id: "proj-1",
-  title: "Archives - Fully Agentic E Commerce App",
-  description: "Archives is an AI-native full stack e commerce platform designed for modern businesses. Beyond traditional buying and selling, it empowers sellers with intelligent inventory management, revenue analytics, blogging, and community building. Its integrated AI assistant, Lucas, understands business context and helps merchants manage operations using natural language, transforming the platform into a conversational business workspace rather than just another e-commerce application.",
-  tech: ["React", "Node.js", "Express", "Javascript", "Python", "LLM", "OpenAI SDK", "Openrouter"],
-  github: "https://github.com/Abhishek024604/Archives-AgenticECommerce",
-  demo: "https://github.com/Abhishek024604/Archives-AgenticECommerce",
-  category: "AI / Full Stack Development",
-  status: "Currently Working"
-},
-{
-  id: "proj-2",
-  title: "DebugMind- AI Powered VS Code Extension for Debugging",
-  description: "DebugMind is an AI-powered Visual Studio Code extension designed to streamline the debugging experience. It automatically analyzes runtime exceptions, compiler errors, stack traces, and source code context to generate actionable debugging suggestions. The extension also visualizes project architecture, enabling developers to understand codebases faster and troubleshoot complex applications more efficiently.",
-  tech: ["VS Code API", "Node.js", "Express", "Python", "LLM", "Openrouter", "OpenAI SDK"],
-  github: "https://github.com/Abhishek024604/VSCodeDebuggingAndArchitectureExtension",
-  demo: "https://github.com/Abhishek024604/VSCodeDebuggingAndArchitectureExtension",
-  category: "AI / Full Stack Development",
-  status: "Currently Working"
-},
+    id: "proj-1",
+    title: "Archives - Fully Agentic E Commerce App",
+    description: "Archives is an AI-native full stack e commerce platform designed for modern businesses. Beyond traditional buying and selling, it empowers sellers with intelligent inventory management, revenue analytics, blogging, and community building. Its integrated AI assistant, Lucas, understands business context and helps merchants manage operations using natural language, transforming the platform into a conversational business workspace rather than just another e-commerce application.",
+    tech: ["React", "Node.js", "Express", "Javascript", "Python", "LLM", "OpenAI SDK", "Openrouter"],
+    github: "https://github.com/Abhishek024604/Archives-AgenticECommerce",
+    demo: "https://github.com/Abhishek024604/Archives-AgenticECommerce",
+    category: "AI / Full Stack Development",
+    status: "Currently Working"
+  },
   {
-  id: "proj-3",
-  title: "B-Roll Planner – AI-Assisted Video Editing System",
-  description: "An AI-powered system that intelligently plans and inserts B-roll into A-roll videos using semantic understanding and editorial judgment. The system separates semantic matching from editorial decisions, avoids repetitive or filler visuals, and inserts B-roll only when it genuinely enhances the narrative, closely mimicking human video editing logic.",
-  tech: ["React", "Node.js", "Express", "Python", "LLM", "Machine Learning"],
-  github: "https://github.com/Abhishek024604/B-Roll-Planner",
-  demo: "https://github.com/Abhishek024604/B-Roll-Planner",
-  category: "AI / Full Stack Development",
-  status: "Currently Working"
-},
+    id: "proj-2",
+    title: "DebugMind- AI Powered VS Code Extension for Debugging",
+    description: "DebugMind is an AI-powered Visual Studio Code extension designed to streamline the debugging experience. It automatically analyzes runtime exceptions, compiler errors, stack traces, and source code context to generate actionable debugging suggestions. The extension also visualizes project architecture, enabling developers to understand codebases faster and troubleshoot complex applications more efficiently.",
+    tech: ["VS Code API", "Node.js", "Express", "Python", "LLM", "Openrouter", "OpenAI SDK"],
+    github: "https://github.com/Abhishek024604/VSCodeDebuggingAndArchitectureExtension",
+    demo: "https://github.com/Abhishek024604/VSCodeDebuggingAndArchitectureExtension",
+    category: "AI / Full Stack Development",
+    status: "Currently Working"
+  },
   {
-  id: "proj-4",
-  title: "Droply – Digital Asset Management Web App",
-  description: "A full-stack digital asset management platform that allows users to securely upload, organize into folders, and manage image and video files. The application supports multi-user access with strong authentication, optimized media handling, and a scalable backend architecture for efficient content storage and retrieval.",
-  tech: ["Next.js", "TypeScript", "Clerk", "Neon DB", "ImageKit"],
-  github: "https://github.com/Abhishek024604/DropBox",
-  demo: "https://github.com/Abhishek024604/DropBox",
-  category: "Web Development",
-  status: "Completed"
-}
-,
+    id: "proj-3",
+    title: "B-Roll Planner – AI-Assisted Video Editing System",
+    description: "An AI-powered system that intelligently plans and inserts B-roll into A-roll videos using semantic understanding and editorial judgment. The system separates semantic matching from editorial decisions, avoids repetitive or filler visuals, and inserts B-roll only when it genuinely enhances the narrative, closely mimicking human video editing logic.",
+    tech: ["React", "Node.js", "Express", "Python", "LLM", "Machine Learning"],
+    github: "https://github.com/Abhishek024604/B-Roll-Planner",
+    demo: "https://github.com/Abhishek024604/B-Roll-Planner",
+    category: "AI / Full Stack Development",
+    status: "Currently Working"
+  },
   {
-  id: "proj-5",
-  title: "TrueFeedback – Public Interaction App",
-  description: "A full-stack public interaction platform that enables users to create shareable profiles and receive questions from anyone, supporting both anonymous and authenticated interactions. The system focuses on user engagement through public links, structured question-response management, and scalable API-driven architecture.",
-  tech: ["Next.js", "TypeScript", "MongoDB", "REST APIs"],
-  github: "https://github.com/Abhishek024604/truefeedback",
-  demo: "https://github.com/Abhishek024604/truefeedback",
-  category: "Web Development",
-  status: "Completed"
-},
+    id: "proj-4",
+    title: "Droply – Digital Asset Management Web App",
+    description: "A full-stack digital asset management platform that allows users to securely upload, organize into folders, and manage image and video files. The application supports multi-user access with strong authentication, optimized media handling, and a scalable backend architecture for efficient content storage and retrieval.",
+    tech: ["Next.js", "TypeScript", "Clerk", "Neon DB", "ImageKit"],
+    github: "https://github.com/Abhishek024604/DropBox",
+    demo: "https://github.com/Abhishek024604/DropBox",
+    category: "Web Development",
+    status: "Completed"
+  }
+  ,
+  {
+    id: "proj-5",
+    title: "TrueFeedback – Public Interaction App",
+    description: "A full-stack public interaction platform that enables users to create shareable profiles and receive questions from anyone, supporting both anonymous and authenticated interactions. The system focuses on user engagement through public links, structured question-response management, and scalable API-driven architecture.",
+    tech: ["Next.js", "TypeScript", "MongoDB", "REST APIs"],
+    github: "https://github.com/Abhishek024604/truefeedback",
+    demo: "https://github.com/Abhishek024604/truefeedback",
+    category: "Web Development",
+    status: "Completed"
+  },
   {
     id: "proj-6",
     title: "NovaFrame - Portfolio Website for Design Agency",
@@ -90,17 +90,18 @@ export const projects = [
 export const experience = [
   {
     id: "exp-1",
-    role: "FullStack Developer Intern",
-    company: "Modelsuite AI",
-    duration: "Sep 2025 - Nov 2025",
-    description: [
-      "Developed RESTful APIs using Node.js and Express for a model and creator management platform",
-      "Implemented authentication and authorization using JWT tokens",
-      "Collaborated with frontend team to integrate APIs with React application",
-      "Designed responsive frontend components with React and Tailwind CSS"
-    ]
+    description: ["Looking for opportunities"]
+    // role: "FullStack Developer Intern",
+    // company: "Modelsuite AI",
+    // duration: "Sep 2025 - Nov 2025",
+    // description: [
+    //   "Developed RESTful APIs using Node.js and Express for a model and creator management platform",
+    //   "Implemented authentication and authorization using JWT tokens",
+    //   "Collaborated with frontend team to integrate APIs with React application",
+    //   "Designed responsive frontend components with React and Tailwind CSS"
+    // ]
   },
-  
+
 ];
 
 export const education = [

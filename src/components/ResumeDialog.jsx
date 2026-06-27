@@ -25,16 +25,16 @@ const ResumeDialog = ({ open, onOpenChange }) => {
                   <div className="p-2 bg-[#8B9D7C] rounded-lg">
                     <Briefcase className="w-5 h-5 text-white" />
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="text-xl font-bold text-[#3D2817]">{exp.role}</h3>
                     <p className="text-[#6B7F5A] font-semibold">{exp.company}</p>
                     <p className="text-sm text-[#A0826D] mt-1">{exp.duration}</p>
-                  </div>
+                  </div> */}
                 </div>
                 <ul className="space-y-2 mt-4">
                   {exp.description.map((point, idx) => (
                     <li key={idx} className="text-[#5D4E37] flex items-start gap-2">
-                      <span className="text-[#6B7F5A] font-bold mt-1">•</span>
+                      {/* <span className="text-[#6B7F5A] font-bold mt-1">•</span> */}
                       <span>{point}</span>
                     </li>
                   ))}
